@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Isha Creation — Handmade Crochet with Love</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%B6%3C/text%3E%3C/svg%3E" />
+<meta name="description" content="Isha Creation — cute handmade crochet keychains, flowers, amigurumi, baby wear and personalised gifts. Order easily on WhatsApp." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FFF7EC', blush: '#FDE9E6', rose: '#EE7B8E', berry: '#D9506B',
+          cocoa: '#4A2C25', butter: '#FFE9A8', peach: '#FFD9C0', sage: '#D5E6CC'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          script: ['Caveat', 'cursive'],
+          sans: ['"DM Sans"', 'system-ui', 'sans-serif']
+        },
+        keyframes: {
+          float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+          wiggle: { '0%,100%': { transform: 'rotate(-6deg)' }, '50%': { transform: 'rotate(6deg)' } },
+          twinkle: { '0%,100%': { opacity: '.35', transform: 'scale(.8)' }, '50%': { opacity: '1', transform: 'scale(1.1)' } }
+        },
+        animation: {
+          float: 'float 5s ease-in-out infinite',
+          wiggle: 'wiggle 4s ease-in-out infinite',
+          twinkle: 'twinkle 2.4s ease-in-out infinite'
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #FFF7EC; color: #4A2C25; -webkit-tap-highlight-color: transparent; }
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .yarn-bg {
+    background-image: radial-gradient(#f6c9c9 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .stitch { border: 2px dashed #F3B3BC; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+  .marquee:hover { animation-play-state: paused; }
+  @keyframes drift { 0% { transform: translateY(0) rotate(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-120px) rotate(25deg); opacity: 0; } }
+  .drift { animation: drift 7s ease-in infinite; }
+  .wavy { background: radial-gradient(circle at 10px -4px, transparent 12px, #FFF7EC 13px) repeat-x; background-size: 20px 20px; height: 20px; }
+  .ig-grad { background: linear-gradient(135deg, #FFD9C0 0%, #F7A9B8 50%, #E57AA0 100%); }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+
+<body class="font-sans antialiased">
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-rose/15">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-2">
+      <span class="text-2xl">🧶</span>
+      <span class="font-script text-3xl leading-none text-cocoa">Isha <span class="text-rose">Creation</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a class="hover:text-rose transition" href="#home">Home</a>
+      <a class="hover:text-rose transition" href="#collections">Collections</a>
+      <a class="hover:text-rose transition" href="#popular">Popular</a>
+      <a class="hover:text-rose transition" href="#shop">Shop All</a>
+      <a class="hover:text-rose transition" href="#about">Our Story</a>
+      <a class="hover:text-rose transition" href="#how">How to Order</a>
+      <a class="hover:text-rose transition" href="#faq">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-blush text-berry hover:bg-rose hover:text-white transition" aria-label="Instagram"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <button data-action="open-wishlist" class="relative w-10 h-10 grid place-items-center rounded-full bg-blush text-berry hover:bg-rose hover:text-white transition text-xl" aria-label="My favourites">♥<span id="wishCount" class="hidden absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-berry text-white text-[10px] font-bold grid place-items-center">0</span></button>
+      <a data-wa="general" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-rose hover:bg-berry text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-rose/30 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.7 1.5h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.2 6.5 6.6 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
+        Order on WhatsApp
+      </a>
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-full bg-blush text-cocoa" aria-label="Open menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-rose/15 bg-cream px-6 py-4 space-y-3 text-sm font-medium">
+    <a class="block" href="#collections">Collections</a>
+    <a class="block" href="#popular">Popular</a>
+    <a class="block" href="#shop">Shop All</a>
+    <button data-action="open-wishlist" class="block">♥ My Favourites</button>
+    <a class="block" href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener">📸 Instagram</a>
+    <a class="block" href="#about">Our Story</a>
+    <a class="block" href="#how">How to Order</a>
+    <a class="block" href="#faq">FAQ</a>
+    <a data-wa="general" target="_blank" rel="noopener" class="inline-block bg-rose text-white font-semibold px-5 py-2.5 rounded-full">Order on WhatsApp</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 yarn-bg opacity-40 pointer-events-none"></div>
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <span class="drift absolute left-[8%] bottom-20 text-rose text-2xl">♥</span>
+    <span class="drift absolute left-[30%] bottom-10 text-butter text-3xl" style="animation-delay:2s">♥</span>
+    <span class="drift absolute left-[55%] bottom-24 text-rose/70 text-xl" style="animation-delay:4s">♥</span>
+    <span class="drift absolute left-[78%] bottom-16 text-peach text-3xl" style="animation-delay:1s">♥</span>
+    <span class="drift absolute left-[92%] bottom-28 text-rose text-2xl" style="animation-delay:3s">♥</span>
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-24 md:pt-16 md:pb-32 grid md:grid-cols-2 gap-10 items-center">
+
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 bg-butter/70 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full">HANDMADE WITH LOVE <span class="text-rose">♥</span></span>
+      <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] mt-5">
+        <span class="text-rose">Crochet</span> that<br/>feels like home.
+      </h1>
+      <p class="font-script text-4xl sm:text-5xl text-rose mt-2 -rotate-2 origin-left">stitched one loop at a time ♡</p>
+      <p class="mt-5 text-lg text-cocoa/80 max-w-md">Tiny friends, blooming flowers and cozy gifts — cute, soft and completely handmade. Pick your favourite and order in one tap on WhatsApp.</p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#collections" class="inline-flex items-center gap-2 bg-rose hover:bg-berry text-white font-semibold px-7 py-3.5 rounded-full shadow-lg shadow-rose/30 transition">Shop Collections <span>→</span></a>
+        <a data-wa="custom" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white hover:bg-blush text-cocoa font-semibold px-7 py-3.5 rounded-full border border-rose/30 transition">Custom Order ✨</a>
+        <a href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-berry font-semibold px-3 py-3.5 hover:underline"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @isha_creation81</a>
+      </div>
+
+      <div class="mt-9 grid grid-cols-3 gap-3 max-w-md">
+        <div class="text-center"><div class="mx-auto w-12 h-12 rounded-full bg-blush grid place-items-center text-xl">🧶</div><p class="text-xs font-semibold mt-2">Handmade<br/>with love</p></div>
+        <div class="text-center"><div class="mx-auto w-12 h-12 rounded-full bg-butter/70 grid place-items-center text-xl">🌿</div><p class="text-xs font-semibold mt-2">Soft &<br/>skin-friendly</p></div>
+        <div class="text-center"><div class="mx-auto w-12 h-12 rounded-full bg-peach/70 grid place-items-center text-xl">🎁</div><p class="text-xs font-semibold mt-2">Perfect<br/>for gifting</p></div>
+      </div>
+    </div>
+
+    <div class="relative reveal">
+      <div class="relative mx-auto max-w-md">
+        <div class="rounded-t-[220px] rounded-b-[2rem] overflow-hidden bg-blush aspect-[4/5] shadow-2xl shadow-rose/20 border-4 border-white">
+          <img id="heroImg" alt="Cute handmade crochet toy" class="w-full h-full object-cover" data-emoji="🐰" />
+        </div>
+        <svg class="absolute -top-2 -left-4 w-8 h-8 text-rose animate-twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="absolute top-16 -right-3 w-6 h-6 text-butter animate-twinkle" style="animation-delay:.8s" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <div class="absolute -bottom-6 -right-2 sm:-right-8 w-36 h-36 rounded-full bg-butter stitch grid place-items-center text-center rotate-12 animate-wiggle shadow-lg" style="border-color:#E9A9B2">
+          <div>
+            <p class="text-rose text-lg leading-none">♡</p>
+            <p class="font-script text-xl leading-5 text-cocoa">Carry a little<br/><span class="text-berry text-2xl">happiness</span><br/>everywhere!</p>
+          </div>
+        </div>
+        <div class="absolute bottom-6 -left-4 sm:-left-10 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 animate-float">
+          <span class="text-2xl">💬</span>
+          <div><p class="text-xs text-cocoa/60 leading-none">Easy ordering</p><p class="text-sm font-bold">Just DM on WhatsApp</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="relative z-10 -mt-14 md:-mt-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl shadow-rose/10 border border-rose/10 grid grid-cols-2 md:grid-cols-4 divide-rose/10 md:divide-x">
+    <div class="p-5 text-center"><p class="text-2xl">🧶</p><p class="font-bold mt-1">100% Handmade</p><p class="text-xs text-cocoa/60">Every stitch made with care</p></div>
+    <div class="p-5 text-center"><p class="text-2xl">☁️</p><p class="font-bold mt-1">Soft & Durable</p><p class="text-xs text-cocoa/60">Premium yarn, cozy feel</p></div>
+    <div class="p-5 text-center border-t md:border-t-0 border-rose/10"><p class="text-2xl">🎁</p><p class="font-bold mt-1">Ideal Gifts</p><p class="text-xs text-cocoa/60">Birthdays, thank-yous & more</p></div>
+    <div class="p-5 text-center border-t md:border-t-0 border-rose/10"><p class="text-2xl">💖</p><p class="font-bold mt-1">Cute & Unique</p><p class="text-xs text-cocoa/60">No two pieces are the same</p></div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="mt-14 bg-rose text-white overflow-hidden py-3 rotate-[-1deg] shadow-md" aria-hidden="true">
+  <div id="marquee" class="marquee font-script text-2xl whitespace-nowrap"></div>
+</div>
+
+<!-- ============ COLLECTIONS ============ -->
+<section id="collections" class="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-6">
+  <div class="text-center reveal">
+    <p class="text-xs font-bold tracking-[.3em] text-rose">— SHOP BY COLLECTION —</p>
+    <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3">Pick a collection, <span class="text-rose">peek inside</span></h2>
+    <p class="mt-3 text-cocoa/70 max-w-lg mx-auto">Tap any collection to open it. Choose a piece, see the details & price, and order on WhatsApp.</p>
+  </div>
+  <div id="collectionGrid" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+</section>
+
+<!-- ============ POPULAR ============ -->
+<section id="popular" class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-6">
+  <div class="flex items-end justify-between gap-4 reveal">
+    <div>
+      <p class="text-xs font-bold tracking-[.3em] text-rose">— HANDCRAFTED FAVOURITES —</p>
+      <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3">Popular <span class="text-rose">creations</span></h2>
+    </div>
+    <div class="hidden sm:flex gap-2">
+      <button data-scroll="-1" class="w-10 h-10 rounded-full bg-white border border-rose/20 hover:bg-blush" aria-label="Previous">‹</button>
+      <button data-scroll="1" class="w-10 h-10 rounded-full bg-white border border-rose/20 hover:bg-blush" aria-label="Next">›</button>
+    </div>
+  </div>
+  <div id="popularRow" class="mt-8 flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"></div>
+</section>
+
+<!-- ============ SHOP ALL ============ -->
+<section id="shop" class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-6">
+  <div class="text-center reveal">
+    <p class="text-xs font-bold tracking-[.3em] text-rose">— EVERYTHING CUTE —</p>
+    <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3">Shop <span class="text-rose">all</span></h2>
+  </div>
+  <div class="mt-8 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+    <div id="shopChips" class="flex gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+    <label class="relative md:w-72">
+      <span class="sr-only">Search</span>
+      <input id="shopSearch" type="search" placeholder="Search bunny, rose, keychain…" class="w-full bg-white border border-rose/25 rounded-full pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-rose/40" />
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-rose">🔍</span>
+    </label>
+  </div>
+  <div id="shopGrid" class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+  <p id="shopEmpty" class="hidden text-center py-10 text-cocoa/60">Nothing matched 🥺 — try another word, or <a data-wa="custom" target="_blank" rel="noopener" class="underline text-berry">ask us for a custom piece</a>.</p>
+</section>
+
+<!-- ============ STORY ============ -->
+<section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center bg-white rounded-[2.5rem] p-6 sm:p-10 border border-rose/10 shadow-xl shadow-rose/5 reveal">
+    <div class="relative">
+      <div class="rounded-[2rem] overflow-hidden aspect-[5/4] bg-blush">
+        <img id="storyImg" alt="Handmade crochet with yarn" class="w-full h-full object-cover" data-emoji="🧶" />
+      </div>
+      <div class="absolute -bottom-4 -right-2 bg-butter rounded-2xl px-4 py-2 font-script text-2xl rotate-3 shadow-md">made with ♥</div>
+    </div>
+    <div>
+      <p class="text-xs font-bold tracking-[.3em] text-rose">— OUR STORY —</p>
+      <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3">Every Loop,<br/><span class="text-rose">a Labor of Love</span></h2>
+      <p class="mt-4 text-cocoa/75 leading-relaxed">Isha Creation began with one hook, a ball of yarn and a lot of patience. Every piece is crocheted by hand — slowly, carefully and with plenty of love — so no two pieces are exactly the same. Just like you!</p>
+      <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm font-medium">
+        <li class="flex gap-3 items-start"><span class="text-rose">♥</span> Handmade crochet, premium yarn</li>
+        <li class="flex gap-3 items-start"><span class="text-rose">♥</span> Lightweight & easy to carry</li>
+        <li class="flex gap-3 items-start"><span class="text-rose">♥</span> Long-lasting & colourful</li>
+        <li class="flex gap-3 items-start"><span class="text-rose">♥</span> Custom colours on request</li>
+      </ul>
+      <a href="#collections" class="mt-7 inline-flex items-center gap-2 bg-cocoa hover:bg-black text-white font-semibold px-6 py-3 rounded-full transition">Explore the shop →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO ORDER ============ -->
+<section id="how" class="bg-blush/60 border-y border-rose/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="text-center reveal">
+      <p class="text-xs font-bold tracking-[.3em] text-rose">— SUPER EASY —</p>
+      <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3">How to <span class="text-rose">order</span></h2>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <div class="bg-white rounded-3xl p-6 text-center shadow-sm reveal"><div class="mx-auto w-14 h-14 rounded-full bg-butter grid place-items-center text-2xl">🛍️</div><p class="font-script text-3xl text-rose mt-3">1</p><h3 class="font-bold text-lg">Pick your favourite</h3><p class="text-sm text-cocoa/70 mt-1">Open a collection, tap a piece and choose your colour.</p></div>
+      <div class="bg-white rounded-3xl p-6 text-center shadow-sm reveal"><div class="mx-auto w-14 h-14 rounded-full bg-sage grid place-items-center text-2xl">💬</div><p class="font-script text-3xl text-rose mt-3">2</p><h3 class="font-bold text-lg">Tap “Order on WhatsApp”</h3><p class="text-sm text-cocoa/70 mt-1">Product ID, name & price are filled in for you. Just hit send!</p></div>
+      <div class="bg-white rounded-3xl p-6 text-center shadow-sm reveal"><div class="mx-auto w-14 h-14 rounded-full bg-peach grid place-items-center text-2xl">📦</div><p class="font-script text-3xl text-rose mt-3">3</p><h3 class="font-bold text-lg">We crochet & ship</h3><p class="text-sm text-cocoa/70 mt-1">We confirm details & payment on chat, then make and pack it with love.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOM CTA ============ -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+  <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-rose to-berry text-white p-8 sm:p-12 text-center reveal">
+    <div class="absolute -top-10 -left-10 text-8xl opacity-20">🧶</div>
+    <div class="absolute -bottom-8 -right-6 text-8xl opacity-20 rotate-12">🌸</div>
+    <p class="font-script text-3xl">have an idea?</p>
+    <h2 class="font-display font-bold text-3xl sm:text-5xl mt-1">Let’s make something just for you</h2>
+    <p class="mt-3 text-white/90 max-w-lg mx-auto">Names, initials, pets, favourite colours, return gifts — tell us what you imagine and we’ll crochet it.</p>
+    <a data-wa="custom" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-white text-berry font-bold px-8 py-3.5 rounded-full hover:bg-butter transition">Share your idea on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+  <div class="ig-grad rounded-[2.5rem] p-8 sm:p-12 text-white grid md:grid-cols-2 gap-8 items-center reveal">
+    <div>
+      <p class="font-script text-3xl">follow our crochet diary</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mt-1">See new pieces first 📸</h2>
+      <p class="mt-3 text-white/90">New designs, behind-the-scenes stitching and happy customers — all on Instagram.</p>
+      <a href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-white text-berry font-bold px-7 py-3.5 rounded-full hover:bg-butter transition"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @isha_creation81</a>
+    </div>
+    <div class="grid grid-cols-3 gap-3" aria-hidden="true">
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float">🧸</div>
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float" style="animation-delay:.6s">🌷</div>
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float" style="animation-delay:1.2s">🪼</div>
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float" style="animation-delay:1.8s">🐰</div>
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float" style="animation-delay:2.4s">🍓</div>
+      <div class="aspect-square rounded-2xl bg-white/25 grid place-items-center text-4xl animate-float" style="animation-delay:3s">🎁</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
+  <div class="text-center reveal">
+    <p class="text-xs font-bold tracking-[.3em] text-rose">— GOOD TO KNOW —</p>
+    <h2 class="font-display font-bold text-4xl mt-3">Little <span class="text-rose">questions</span></h2>
+  </div>
+  <div class="mt-8 space-y-3">
+    <details class="group bg-white rounded-2xl border border-rose/10 p-5 reveal"><summary class="flex justify-between items-center cursor-pointer font-semibold">How long does an order take?<span class="plus text-rose text-2xl transition">+</span></summary><p class="mt-3 text-sm text-cocoa/70">Each piece is made by hand, so it usually takes a few days depending on the item. We’ll confirm the exact time on WhatsApp before you pay.</p></details>
+    <details class="group bg-white rounded-2xl border border-rose/10 p-5 reveal"><summary class="flex justify-between items-center cursor-pointer font-semibold">Can I choose colours or add a name?<span class="plus text-rose text-2xl transition">+</span></summary><p class="mt-3 text-sm text-cocoa/70">Yes! Pick a colour on the product page, or message us for a custom colour combo, name or initial.</p></details>
+    <details class="group bg-white rounded-2xl border border-rose/10 p-5 reveal"><summary class="flex justify-between items-center cursor-pointer font-semibold">How do I pay?<span class="plus text-rose text-2xl transition">+</span></summary><p class="mt-3 text-sm text-cocoa/70">After you message us, we share the payment details on chat (UPI etc.). We start crocheting once it’s confirmed.</p></details>
+    <details class="group bg-white rounded-2xl border border-rose/10 p-5 reveal"><summary class="flex justify-between items-center cursor-pointer font-semibold">How do I care for crochet items?<span class="plus text-rose text-2xl transition">+</span></summary><p class="mt-3 text-sm text-cocoa/70">Keep away from water and excessive heat. For soft toys and baby wear, gentle hand wash and air dry.</p></details>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-cocoa text-cream">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <p class="font-script text-4xl">Isha <span class="text-rose">Creation</span></p>
+      <p class="text-sm text-cream/70 mt-2">Handmade crochet, stitched with warmth, beauty and heartfelt charm to your everyday life.</p>
+    </div>
+    <div>
+      <p class="font-bold tracking-widest text-xs text-rose">QUICK LINKS</p>
+      <ul class="mt-3 space-y-2 text-sm text-cream/80"><li><a href="#collections" class="hover:text-white">Collections</a></li><li><a href="#popular" class="hover:text-white">Popular</a></li><li><a href="#about" class="hover:text-white">Our Story</a></li><li><a href="#faq" class="hover:text-white">FAQ</a></li></ul>
+    </div>
+    <div>
+      <p class="font-bold tracking-widest text-xs text-rose">COLLECTIONS</p>
+      <ul id="footerCols" class="mt-3 space-y-2 text-sm text-cream/80"></ul>
+    </div>
+    <div>
+      <p class="font-bold tracking-widest text-xs text-rose">GET IN TOUCH</p>
+      <ul class="mt-3 space-y-2 text-sm text-cream/80">
+        <li>📱 WhatsApp: <a data-wa="general" target="_blank" rel="noopener" class="underline hover:text-white">+91 96992 50001</a></li>
+        <li>📸 Instagram: <a href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener" class="underline hover:text-white">@isha_creation81</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 text-center text-xs text-cream/60 py-5">© <span id="yr"></span> Isha Creation · Handmade with ♥</div>
+</footer>
+
+<!-- Floating Instagram -->
+<a href="https://www.instagram.com/isha_creation81" target="_blank" rel="noopener" aria-label="Instagram" class="fixed bottom-[5.25rem] right-5 z-30 w-14 h-14 rounded-full ig-grad text-white grid place-items-center shadow-xl hover:scale-105 transition"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+
+<!-- Toast -->
+<div id="toast" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-[70] bg-cocoa text-cream text-sm font-medium px-5 py-3 rounded-full shadow-xl opacity-0 pointer-events-none transition duration-300 translate-y-3"></div>
+
+<!-- Floating WhatsApp -->
+<a data-wa="general" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-30 w-14 h-14 rounded-full bg-[#25D366] text-white grid place-items-center shadow-xl hover:scale-105 transition">
+  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.7 1.5h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.2 6.5 6.6 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<!-- ============ DRAWER ============ -->
+<div id="overlay" class="fixed inset-0 z-50 bg-cocoa/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle"
+       class="fixed top-0 right-0 z-[60] h-full w-full sm:w-[540px] bg-cream shadow-2xl translate-x-full transition-transform duration-300 flex flex-col">
+  <div class="flex items-center gap-3 px-4 sm:px-5 h-16 border-b border-rose/15 bg-white/70 shrink-0">
+    <button id="drawerBack" class="hidden w-9 h-9 rounded-full bg-blush grid place-items-center" aria-label="Back to collection">‹</button>
+    <div class="min-w-0 flex-1">
+      <p id="drawerKicker" class="text-[10px] font-bold tracking-[.25em] text-rose"></p>
+      <h3 id="drawerTitle" class="font-display font-bold text-xl truncate"></h3>
+    </div>
+    <button id="drawerClose" class="w-9 h-9 rounded-full bg-blush grid place-items-center text-lg" aria-label="Close">✕</button>
+  </div>
+  <div id="drawerBody" class="flex-1 overflow-y-auto"></div>
+  <div id="drawerFooter" class="shrink-0 border-t border-rose/15 bg-white px-4 sm:px-5 py-3 hidden"></div>
+</aside>
+
+<script>
+/* =========================================================
+   EDIT ME — shop settings & products
+   ========================================================= */
+const WHATSAPP_NUMBER = "919699250001";   // country code 91 + number
+const BRAND = "Isha Creation";
+const INSTAGRAM_URL = "https://www.instagram.com/isha_creation81";
+const INSTAGRAM_HANDLE = "@isha_creation81";
+
+/* Photos: stock placeholders for now (loremflickr keyword photos).
+   To use your own photos, put a link/path in `img` for any item/collection,
+   e.g. img: "photos/jellyfish.jpg". If `img` is empty, the stock photo is used. */
+const COLLECTIONS = [
+  { id: "keychains", name: "Keychains & Charms", emoji: "🪼", blurb: "Tiny friends for your keys & bags", kw: "crochet,keychain", lock: 11, img: "" },
+  { id: "flowers",   name: "Flowers & Decor",    emoji: "🌻", blurb: "Blooms that never wilt",            kw: "crochet,flower",   lock: 12, img: "" },
+  { id: "pets",      name: "Amigurumi Friends",  emoji: "🐰", blurb: "Snuggly stuffed crochet pals",       kw: "crochet,amigurumi",lock: 13, img: "" },
+  { id: "baby",      name: "Kids & Baby",        emoji: "🧸", blurb: "Soft, gentle & adorable",           kw: "crochet,baby",     lock: 14, img: "" },
+  { id: "custom",    name: "Personalised",       emoji: "💌", blurb: "Made just for you",                 kw: "crochet,yarn",     lock: 15, img: "" }
+];
+
+/* id must be unique. colors = choices shown to the customer. */
+const PRODUCTS = [
+  // ---- Keychains & Charms
+  { id:"LB-KC-01", col:"keychains", name:"Bloom Jellyfish Keychain", price:249, badge:"Bestseller", emoji:"🪼", kw:"crochet,keychain", lock:21, img:"",
+    desc:"A tiny friend that brings big smiles. A little daisy-topped jellyfish with twirly tentacles — cute, cozy and completely handmade.",
+    mat:"Premium acrylic yarn", size:"12–14 cm", colors:["Cream & Pink","Cream & Yellow","Lavender"], care:"Keep away from water & excessive heat", time:"3–4 days" },
+  { id:"LB-KC-02", col:"keychains", name:"Mini Daisy Charm", price:149, badge:"New", emoji:"🌼", kw:"crochet,flower", lock:22, img:"",
+    desc:"A pocket-sized daisy to brighten your keys, bag or earphone case.",
+    mat:"Soft cotton yarn", size:"≈ 6 cm", colors:["White & Yellow","Pink","Blue"], care:"Spot clean only", time:"2–3 days" },
+  { id:"LB-KC-03", col:"keychains", name:"Strawberry Bag Charm", price:199, badge:"", emoji:"🍓", kw:"crochet,strawberry", lock:23, img:"",
+    desc:"A juicy little strawberry with a green leafy top. Sweet on any bag.",
+    mat:"Cotton yarn, polyfill", size:"≈ 7 cm", colors:["Classic Red","Pastel Pink"], care:"Spot clean only", time:"3 days" },
+  { id:"LB-KC-04", col:"keychains", name:"Chubby Chick Keychain", price:179, badge:"", emoji:"🐥", kw:"crochet,chick", lock:24, img:"",
+    desc:"A fluffy yellow chick with a tiny orange beak. Impossible not to smile.",
+    mat:"Soft milk cotton", size:"≈ 7 cm", colors:["Yellow","Peach"], care:"Spot clean only", time:"3 days" },
+  { id:"LB-KC-05", col:"keychains", name:"Cloud & Rainbow Charm", price:229, badge:"", emoji:"🌈", kw:"crochet,rainbow", lock:25, img:"",
+    desc:"A dreamy pastel cloud with a rainbow — cute on bags and car mirrors.",
+    mat:"Premium acrylic yarn", size:"≈ 9 cm", colors:["Pastel Rainbow","Pink Rainbow"], care:"Keep away from water", time:"3–4 days" },
+
+  // ---- Flowers & Decor
+  { id:"LB-FL-01", col:"flowers", name:"Sunny Sunflower Stem", price:129, badge:"Top Rated", emoji:"🌻", kw:"crochet,sunflower", lock:31, img:"",
+    desc:"A cheerful sunflower on a bendy stem. Pop it in a vase or gift it with a smile.",
+    mat:"Cotton yarn, wire stem", size:"≈ 30 cm", colors:["Yellow & Brown"], care:"Dust gently, no water", time:"2–3 days" },
+  { id:"LB-FL-02", col:"flowers", name:"Tulip Bouquet (3 stems)", price:349, badge:"Gift Pick", emoji:"🌷", kw:"crochet,tulip", lock:32, img:"",
+    desc:"Three pastel tulips tied with a ribbon — a bouquet that lasts forever.",
+    mat:"Cotton yarn, wire stems", size:"≈ 32 cm", colors:["Pink Mix","Lavender Mix","Peach Mix"], care:"Dust gently, no water", time:"4 days" },
+  { id:"LB-FL-03", col:"flowers", name:"Forever Rose", price:149, badge:"", emoji:"🌹", kw:"crochet,rose", lock:33, img:"",
+    desc:"A soft crochet rose that never fades. A perfect little love note.",
+    mat:"Cotton yarn, wire stem", size:"≈ 28 cm", colors:["Red","Pink","White"], care:"Dust gently, no water", time:"2–3 days" },
+  { id:"LB-FL-04", col:"flowers", name:"Daisy Desk Pot", price:399, badge:"New", emoji:"🪴", kw:"crochet,plant", lock:34, img:"",
+    desc:"A cute potted daisy to brighten your desk or study table.",
+    mat:"Cotton yarn, ceramic-look pot", size:"≈ 15 cm", colors:["White Daisy","Pink Daisy"], care:"Dust gently, no water", time:"4 days" },
+  { id:"LB-FL-05", col:"flowers", name:"Boho Coaster Set (4)", price:499, badge:"", emoji:"☕", kw:"crochet,coaster", lock:35, img:"",
+    desc:"Set of 4 handmade floral coasters — pretty and practical for your chai time.",
+    mat:"100% natural cotton", size:"≈ 10 cm each", colors:["Pastel Mix","Earthy Boho"], care:"Hand wash gently, air dry", time:"5 days" },
+
+  // ---- Amigurumi Friends
+  { id:"LB-AM-01", col:"pets", name:"Pocket Panda", price:499, badge:"Top Rated", emoji:"🐼", kw:"crochet,panda", lock:41, img:"",
+    desc:"A tiny bamboo-loving panda. Soft, squishy and ready for hugs.",
+    mat:"Soft chenille yarn, polyfill", size:"≈ 12 cm", colors:["Classic Black & White"], care:"Spot clean, air dry", time:"5 days" },
+  { id:"LB-AM-02", col:"pets", name:"Bunny Buddy", price:599, badge:"Bestseller", emoji:"🐰", kw:"crochet,bunny", lock:42, img:"",
+    desc:"A sweet bunny with floppy ears and a tiny scarf. Perfect birthday gift.",
+    mat:"Milk cotton, polyfill", size:"≈ 18 cm", colors:["Cream","Pink","Grey"], care:"Spot clean, air dry", time:"5–6 days" },
+  { id:"LB-AM-03", col:"pets", name:"Teddy Bear", price:549, badge:"", emoji:"🧸", kw:"crochet,teddy", lock:43, img:"",
+    desc:"A classic cuddly teddy, handmade with extra-soft yarn.",
+    mat:"Soft yarn, polyfill", size:"≈ 16 cm", colors:["Beige","Brown","Pink"], care:"Spot clean, air dry", time:"5 days" },
+  { id:"LB-AM-04", col:"pets", name:"Little Octopus", price:449, badge:"New", emoji:"🐙", kw:"crochet,octopus", lock:44, img:"",
+    desc:"A happy octopus with curly legs — loved by babies and grown-ups too.",
+    mat:"Cotton yarn, polyfill", size:"≈ 14 cm", colors:["Pink","Purple","Yellow"], care:"Spot clean, air dry", time:"4–5 days" },
+  { id:"LB-AM-05", col:"pets", name:"Cozy Cat", price:549, badge:"", emoji:"🐱", kw:"crochet,cat", lock:45, img:"",
+    desc:"A sleepy kitty with tiny whiskers. Choose a colour like your own cat!",
+    mat:"Soft yarn, polyfill", size:"≈ 15 cm", colors:["Orange","Grey","Black","White"], care:"Spot clean, air dry", time:"5 days" },
+
+  // ---- Kids & Baby
+  { id:"LB-KB-01", col:"baby", name:"Bear Ears Baby Beanie", price:349, badge:"New", emoji:"🧢", kw:"crochet,beanie", lock:51, img:"",
+    desc:"Ultra-soft hypoallergenic beanie with tiny bear ears. Warm and adorable.",
+    mat:"Ultra-soft baby yarn", size:"0–12 months", colors:["Beige & Green","Pink","Mint"], care:"Gentle hand wash, air dry", time:"3–4 days" },
+  { id:"LB-KB-02", col:"baby", name:"Tiny Booties", price:299, badge:"Gift Pick", emoji:"👶", kw:"crochet,booties", lock:52, img:"",
+    desc:"Little crochet booties that stay on and keep tiny toes toasty.",
+    mat:"Baby-soft yarn", size:"0–9 months", colors:["Coral Pink","Baby Blue","Cream"], care:"Gentle hand wash, air dry", time:"3 days" },
+  { id:"LB-KB-03", col:"baby", name:"Soft Rattle Toy", price:249, badge:"", emoji:"🔔", kw:"crochet,rattle", lock:53, img:"",
+    desc:"A gentle rattle with a cute face, easy for tiny hands to hold.",
+    mat:"Cotton yarn, safe rattle insert", size:"≈ 14 cm", colors:["Bunny","Bear","Elephant"], care:"Spot clean only", time:"3–4 days" },
+  { id:"LB-KB-04", col:"baby", name:"Cuddle Blanket", price:1299, badge:"Premium", emoji:"🛏️", kw:"crochet,blanket", lock:54, img:"",
+    desc:"A big, cozy, soft crochet blanket for strollers and naptime.",
+    mat:"Baby-soft yarn", size:"≈ 80 × 80 cm", colors:["Pastel Pink","Soft White","Sage Green"], care:"Gentle hand wash, air dry", time:"10–12 days" },
+
+  // ---- Personalised
+  { id:"LB-PS-01", col:"custom", name:"Monogram Letter Keychain", price:249, badge:"Customisable", emoji:"🔤", kw:"crochet,letter", lock:61, img:"",
+    desc:"Your initial in soft crochet with a gold clasp. Tell us the letter & colour on WhatsApp.",
+    mat:"Soft milk cotton, gold alloy clasp", size:"≈ 8 cm", colors:["Blush Pink","Cream","Sky Blue","Custom colour"], care:"Spot clean only", time:"3–4 days" },
+  { id:"LB-PS-02", col:"custom", name:"Name Bookmark", price:199, badge:"", emoji:"🔖", kw:"crochet,bookmark", lock:62, img:"",
+    desc:"A handmade bookmark with a tiny charm. Add a name for a special touch.",
+    mat:"Cotton yarn", size:"≈ 15 cm", colors:["Pink","Yellow","Green","Custom colour"], care:"Keep dry", time:"3 days" },
+  { id:"LB-PS-03", col:"custom", name:"Custom Amigurumi (pet / character)", price:899, badge:"Made for you", emoji:"🐶", kw:"crochet,doll", lock:63, img:"",
+    desc:"Send us a photo of your pet or favourite character and we’ll crochet a mini version.",
+    mat:"Soft yarn, polyfill", size:"≈ 15–20 cm", colors:["As per your photo"], care:"Spot clean, air dry", time:"7–10 days" },
+  { id:"LB-PS-04", col:"custom", name:"Gift Hamper", price:1199, badge:"Gift Pick", emoji:"🎁", kw:"crochet,gift", lock:64, img:"",
+    desc:"A pretty box with a crochet charm, flower and a handwritten note. Great for birthdays.",
+    mat:"Mixed yarn, gift box", size:"Box ≈ 20 cm", colors:["Pink Box","Cream Box"], care:"Keep dry", time:"5–6 days" }
+];
+
+const POPULAR_IDS = ["LB-KC-01","LB-AM-01","LB-KB-01","LB-PS-01","LB-FL-02","LB-AM-02"];
+
+/* =========================================================
+   Helpers
+   ========================================================= */
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const inr = n => "₹" + Number(n).toLocaleString("en-IN");
+const colById = id => COLLECTIONS.find(c => c.id === id);
+const prodById = id => PRODUCTS.find(p => p.id === id);
+const prodsOf = cid => PRODUCTS.filter(p => p.col === cid);
+const waLink = text => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+function stockUrl(kw, lock, size = 600) { return `https://loremflickr.com/${size}/${size}/${kw}/all?lock=${lock}`; }
+function imgOf(o, size = 600) { return o.img || stockUrl(o.kw, o.lock, size); }
+
+/* If a photo fails to load, show a cute pastel emoji tile instead */
+function fb(el) {
+  el.onerror = null;
+  const e = el.dataset.emoji || "🧶";
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#FFE3E0'/><stop offset='1' stop-color='#FFF0C9'/></linearGradient></defs><rect width='200' height='200' fill='url(#g)'/><text x='100' y='128' font-size='86' text-anchor='middle'>${e}</text></svg>`;
+  el.src = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+}
+function setImg(el, src) { el.onerror = function () { fb(el); }; el.src = src; }
+
+/* Favourites — saved on this device (localStorage + cookie backup, kept 1 year) */
+const WISH_KEY = "ic_wish";
+const Store = {
+  get() {
+    try { const v = localStorage.getItem(WISH_KEY); if (v) return JSON.parse(v); } catch (e) {}
+    try {
+      const m = document.cookie.match(/(?:^|; )ic_wish=([^;]*)/);
+      if (m) return JSON.parse(decodeURIComponent(m[1]));
+    } catch (e) {}
+    return [];
+  },
+  set(arr) {
+    const s = JSON.stringify(arr);
+    try { localStorage.setItem(WISH_KEY, s); } catch (e) {}
+    try { document.cookie = WISH_KEY + "=" + encodeURIComponent(s) + "; max-age=31536000; path=/; SameSite=Lax"; } catch (e) {}
+  }
+};
+let wish = new Set((Store.get() || []).filter(id => prodById(id)));
+function saveWish() { Store.set([...wish]); }
+const heart = id => wish.has(id) ? "♥" : "♡";
+
+function showToast(msg) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.remove("opacity-0", "translate-y-3");
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => t.classList.add("opacity-0", "translate-y-3"), 2200);
+}
+function burst(x, y) {
+  const colors = ["#EE7B8E", "#D9506B", "#FFE9A8", "#FFD9C0"];
+  for (let i = 0; i < 8; i++) {
+    const el = document.createElement("span");
+    el.textContent = "♥";
+    el.style.cssText = `position:fixed;left:${x}px;top:${y}px;z-index:90;pointer-events:none;font-size:${12 + Math.random() * 12}px;color:${colors[i % 4]}`;
+    document.body.appendChild(el);
+    const ang = (Math.PI * 2 * i) / 8, d = 40 + Math.random() * 30;
+    const anim = el.animate(
+      [{ transform: "translate(-50%,-50%) scale(.4)", opacity: 1 },
+       { transform: `translate(calc(-50% + ${Math.cos(ang) * d}px), calc(-50% + ${Math.sin(ang) * d - 20}px)) scale(1.1)`, opacity: 0 }],
+      { duration: 700, easing: "ease-out" });
+    anim.onfinish = () => el.remove();
+  }
+}
+function updateWishUI() {
+  $$('[data-action="wish"]').forEach(b => { b.textContent = heart(b.dataset.id); });
+  const c = $("#wishCount");
+  c.textContent = wish.size;
+  c.classList.toggle("hidden", wish.size === 0);
+}
+function toggleWish(id, ev) {
+  const adding = !wish.has(id);
+  adding ? wish.add(id) : wish.delete(id);
+  saveWish();
+  updateWishUI();
+  if (adding) {
+    const r = ev && ev.target && ev.target.getBoundingClientRect ? ev.target.getBoundingClientRect() : null;
+    if (r) burst(r.left + r.width / 2, r.top + r.height / 2);
+    showToast("Added to your favourites 💖");
+  } else {
+    showToast("Removed from favourites");
+  }
+  if (state.view === "wish") renderWishBody();
+}
+
+/* =========================================================
+   WhatsApp messages
+   ========================================================= */
+function orderMessage(p, color, qty) {
+  const lines = [
+    `Hi ${BRAND}! 🧶`,
+    ``,
+    `I want to order this piece:`,
+    ``,
+    `Product ID: ${p.id}`,
+    `Name: ${p.name}`,
+    `Price: ${inr(p.price)}`,
+    `Colour: ${color}`,
+    `Quantity: ${qty}`
+  ];
+  if (qty > 1) lines.push(`Total: ${inr(p.price * qty)}`);
+  lines.push(``, `I also want to get more details about this product (availability, delivery time & payment).`, `Thank you! 💖`);
+  return lines.join("\n");
+}
+function askMessage(p) {
+  return [
+    `Hi ${BRAND}! 🧶`,
+    ``,
+    `I'd like more details about this product:`,
+    ``,
+    `Product ID: ${p.id}`,
+    `Name: ${p.name}`,
+    `Price: ${inr(p.price)}`,
+    ``,
+    `Could you please share more photos, colour options and delivery time?`
+  ].join("\n");
+}
+function wishMessage(items) {
+  const lines = [`Hi ${BRAND}! 🧶`, ``, `I want to order these pieces from my favourites:`, ``];
+  items.forEach((p, i) => {
+    lines.push(`${i + 1}) Product ID: ${p.id}`, `    Name: ${p.name}`, `    Price: ${inr(p.price)}`, ``);
+  });
+  lines.push(`Total: ${inr(items.reduce((s, p) => s + p.price, 0))}`, ``,
+    `Please share availability, colour options & delivery time. Thank you! 💖`);
+  return lines.join("\n");
+}
+const generalMessage = `Hi ${BRAND}! 🧶 I found your website and I'd like to know more about your crochet creations.`;
+const customMessage = `Hi ${BRAND}! 🧶 I'd like a custom crochet piece.\n\nMy idea: \nColours: \nBy when: \n\nPlease let me know what's possible. Thank you! 💖`;
+
+function wireGenericWA() {
+  $$("[data-wa]").forEach(a => {
+    a.href = waLink(a.dataset.wa === "custom" ? customMessage : generalMessage);
+  });
+}
+
+/* =========================================================
+   Render: collections, popular, footer
+   ========================================================= */
+function productCard(p, cls = "") {
+  return `
+  <article class="group bg-white rounded-3xl overflow-hidden border border-rose/10 shadow-sm hover:shadow-xl hover:shadow-rose/10 transition cursor-pointer ${cls}" data-action="open-product" data-id="${p.id}">
+    <div class="relative aspect-square bg-blush overflow-hidden">
+      <img src="${imgOf(p, 500)}" data-emoji="${p.emoji}" alt="${p.name}" loading="lazy" onerror="fb(this)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+      ${p.badge ? `<span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full">${p.badge}</span>` : ""}
+      <button data-action="wish" data-id="${p.id}" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-rose grid place-items-center text-lg shadow" aria-label="Save to wishlist">${heart(p.id)}</button>
+    </div>
+    <div class="p-4">
+      <p class="text-[10px] font-bold tracking-widest text-cocoa/40">${p.id}</p>
+      <h4 class="font-bold leading-snug mt-0.5 line-clamp-2">${p.name}</h4>
+      <div class="mt-2 flex items-center justify-between">
+        <span class="font-display font-bold text-lg text-berry">${inr(p.price)}</span>
+        <span class="text-xs font-semibold bg-blush text-berry px-3 py-1.5 rounded-full group-hover:bg-rose group-hover:text-white transition">View</span>
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderCollections() {
+  $("#collectionGrid").innerHTML = COLLECTIONS.map(c => `
+    <button data-action="open-collection" data-id="${c.id}" class="group text-left bg-white rounded-3xl overflow-hidden border border-rose/10 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:shadow-rose/15 transition reveal">
+      <div class="relative aspect-[4/5] bg-blush overflow-hidden">
+        <img src="${imgOf(c, 500)}" data-emoji="${c.emoji}" alt="${c.name}" loading="lazy" onerror="fb(this)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <span class="absolute top-3 left-3 w-10 h-10 grid place-items-center rounded-full bg-white/90 text-xl shadow">${c.emoji}</span>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-rose to-rose/80 text-white px-4 py-3">
+          <p class="font-bold leading-tight">${c.name}</p>
+          <p class="text-xs text-white/90">${prodsOf(c.id).length} items · tap to open →</p>
+        </div>
+      </div>
+      <p class="px-4 py-3 text-xs text-cocoa/60">${c.blurb}</p>
+    </button>`).join("");
+}
+
+function renderPopular() {
+  $("#popularRow").innerHTML = POPULAR_IDS.map(id => prodById(id)).filter(Boolean)
+    .map(p => productCard(p, "min-w-[230px] sm:min-w-[250px] snap-start")).join("");
+}
+
+function renderFooter() {
+  $("#footerCols").innerHTML = COLLECTIONS.map(c =>
+    `<li><button data-action="open-collection" data-id="${c.id}" class="hover:text-white text-left">${c.name}</button></li>`).join("");
+  $("#yr").textContent = new Date().getFullYear();
+}
+
+let shopCol = "all";
+function renderShop() {
+  const q = ($("#shopSearch").value || "").trim().toLowerCase();
+  $("#shopChips").innerHTML = [{ id: "all", name: "All", emoji: "✨" }, ...COLLECTIONS].map(c =>
+    `<button data-action="shop-filter" data-id="${c.id}" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold border transition ${shopCol === c.id ? "bg-rose text-white border-rose" : "bg-white border-rose/25 hover:bg-blush"}">${c.emoji} ${c.name}</button>`).join("");
+  const list = PRODUCTS.filter(p =>
+    (shopCol === "all" || p.col === shopCol) &&
+    (!q || (p.name + " " + p.desc + " " + p.id + " " + p.colors.join(" ")).toLowerCase().includes(q)));
+  $("#shopGrid").innerHTML = list.map(p => productCard(p)).join("");
+  $("#shopEmpty").classList.toggle("hidden", list.length > 0);
+  wireGenericWA();
+}
+
+function renderMarquee() {
+  const words = ["Handmade with love", "Cute & cozy", "Made to order", "Perfect for gifting", "Custom colours", "One loop at a time"];
+  const one = words.map(w => `<span class="px-6">${w}</span><span class="text-butter">♥</span>`).join("");
+  $("#marquee").innerHTML = one + one + one + one;
+}
+
+function renderAll() { renderCollections(); renderPopular(); renderShop(); updateWishUI(); observeReveal(); }
+
+/* =========================================================
+   Drawer (collection list ⇄ product detail)
+   ========================================================= */
+const drawer = $("#drawer"), overlay = $("#overlay"), body = $("#drawerBody"), footer = $("#drawerFooter");
+const state = { col: null, pid: null, color: null, qty: 1, view: null, from: null };
+
+function showDrawer() {
+  drawer.classList.remove("translate-x-full");
+  overlay.classList.remove("opacity-0", "pointer-events-none");
+  document.body.style.overflow = "hidden";
+}
+function closeDrawer() {
+  state.view = null;
+  drawer.classList.add("translate-x-full");
+  overlay.classList.add("opacity-0", "pointer-events-none");
+  document.body.style.overflow = "";
+  state.pid = null;
+}
+
+function openCollection(cid) {
+  state.col = cid; state.pid = null; state.view = "col";
+  const c = colById(cid);
+  $("#drawerKicker").textContent = "COLLECTION · " + prodsOf(cid).length + " ITEMS";
+  $("#drawerTitle").textContent = c.emoji + " " + c.name;
+  $("#drawerBack").classList.add("hidden");
+  footer.classList.add("hidden"); footer.innerHTML = "";
+  body.innerHTML = `
+    <div class="p-4 sm:p-5">
+      <p class="text-sm text-cocoa/70">${c.blurb}. Tap a piece to see details & order.</p>
+      <div class="mt-4 grid grid-cols-2 gap-3">${prodsOf(cid).map(p => productCard(p)).join("")}</div>
+      <a data-wa="custom" target="_blank" rel="noopener" class="mt-6 block text-center bg-butter/70 hover:bg-butter rounded-2xl p-4 text-sm font-semibold">Can’t find what you want? Ask for a custom piece ✨</a>
+    </div>`;
+  wireGenericWA();
+  body.scrollTop = 0;
+  showDrawer();
+}
+
+function openProduct(pid, from) {
+  const p = prodById(pid); if (!p) return;
+  const c = colById(p.col);
+  state.col = p.col; state.pid = pid; state.color = p.colors[0]; state.qty = 1; state.view = "prod"; state.from = from || null;
+  $("#drawerKicker").textContent = c.name.toUpperCase();
+  $("#drawerTitle").textContent = p.name;
+  $("#drawerBack").classList.remove("hidden");
+
+  const more = prodsOf(p.col).filter(x => x.id !== pid);
+  body.innerHTML = `
+    <div class="relative aspect-square bg-blush">
+      <img id="dImg" alt="${p.name}" data-emoji="${p.emoji}" class="w-full h-full object-cover" />
+      ${p.badge ? `<span class="absolute top-4 left-4 bg-rose text-white text-xs font-bold px-3 py-1 rounded-full">${p.badge}</span>` : ""}
+      <button data-action="wish" data-id="${p.id}" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 text-rose grid place-items-center text-xl shadow" aria-label="Save to wishlist">${heart(p.id)}</button>
+    </div>
+    <div class="p-5">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="inline-block text-[10px] font-bold tracking-widest bg-blush text-berry px-2.5 py-1 rounded-full">PRODUCT ID · ${p.id}</span>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2 leading-tight">${p.name}</h2>
+        </div>
+        <p class="font-display font-bold text-2xl text-berry whitespace-nowrap">${inr(p.price)}</p>
+      </div>
+      <p class="mt-3 text-cocoa/75 leading-relaxed">${p.desc}</p>
+
+      <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-2xl p-3 border border-rose/10"><p class="text-[10px] font-bold tracking-widest text-rose">MATERIAL</p><p class="mt-0.5 font-medium">${p.mat}</p></div>
+        <div class="bg-white rounded-2xl p-3 border border-rose/10"><p class="text-[10px] font-bold tracking-widest text-rose">SIZE</p><p class="mt-0.5 font-medium">${p.size}</p></div>
+        <div class="bg-white rounded-2xl p-3 border border-rose/10"><p class="text-[10px] font-bold tracking-widest text-rose">CARE</p><p class="mt-0.5 font-medium">${p.care}</p></div>
+        <div class="bg-white rounded-2xl p-3 border border-rose/10"><p class="text-[10px] font-bold tracking-widest text-rose">MAKING TIME</p><p class="mt-0.5 font-medium">${p.time}</p></div>
+      </div>
+
+      <div id="opts" class="mt-5"></div>
+
+      <div class="mt-6 rounded-2xl bg-sage/50 p-4 text-sm flex gap-3"><span class="text-xl">💬</span><p><b>How ordering works:</b> tap “Order on WhatsApp” — the product ID, name & price are filled in automatically. We’ll confirm details and payment on chat.</p></div>
+
+      ${more.length ? `
+      <h4 class="font-display font-bold text-xl mt-8">More from this collection</h4>
+      <div class="mt-3 flex gap-3 overflow-x-auto no-scrollbar pb-2 -mx-5 px-5">
+        ${more.map(m => `
+          <button data-action="open-product" data-id="${m.id}" class="min-w-[130px] text-left bg-white rounded-2xl overflow-hidden border border-rose/10">
+            <div class="aspect-square bg-blush"><img src="${imgOf(m, 300)}" data-emoji="${m.emoji}" alt="${m.name}" loading="lazy" onerror="fb(this)" class="w-full h-full object-cover" /></div>
+            <div class="p-2.5"><p class="text-xs font-semibold leading-snug line-clamp-2">${m.name}</p><p class="text-xs font-bold text-berry mt-1">${inr(m.price)}</p></div>
+          </button>`).join("")}
+      </div>` : ""}
+    </div>`;
+  setImg($("#dImg"), imgOf(p, 800));
+  renderOpts(); renderFooter2();
+  body.scrollTop = 0;
+  showDrawer();
+}
+
+function openWishlist() {
+  state.view = "wish"; state.pid = null; state.from = null;
+  $("#drawerKicker").textContent = "SAVED ON THIS DEVICE";
+  $("#drawerTitle").textContent = "♥ My Favourites";
+  $("#drawerBack").classList.add("hidden");
+  renderWishBody();
+  showDrawer();
+}
+
+function renderWishBody() {
+  const items = [...wish].map(prodById).filter(Boolean);
+  if (!items.length) {
+    footer.classList.add("hidden"); footer.innerHTML = "";
+    body.innerHTML = `
+      <div class="p-8 text-center">
+        <div class="text-6xl animate-float">🧺</div>
+        <h3 class="font-display font-bold text-2xl mt-4">Your basket of love is empty</h3>
+        <p class="text-cocoa/70 mt-2 text-sm">Tap the ♡ on anything you like and it will be saved here — even if you close the page.</p>
+        <button data-action="close-drawer" class="mt-6 bg-rose hover:bg-berry text-white font-semibold px-7 py-3 rounded-full">Browse the shop</button>
+      </div>`;
+    return;
+  }
+  const total = items.reduce((s, p) => s + p.price, 0);
+  body.innerHTML = `
+    <div class="p-4 sm:p-5 space-y-3">
+      <p class="text-sm text-cocoa/70">${items.length} saved piece${items.length > 1 ? "s" : ""}. Order them all in one WhatsApp message, or tap one to see details.</p>
+      ${items.map(p => `
+        <div class="flex gap-3 bg-white rounded-2xl p-3 border border-rose/10">
+          <button data-action="open-product" data-id="${p.id}" class="w-20 h-20 rounded-xl overflow-hidden bg-blush shrink-0">
+            <img src="${imgOf(p, 200)}" data-emoji="${p.emoji}" alt="${p.name}" onerror="fb(this)" class="w-full h-full object-cover" />
+          </button>
+          <div class="min-w-0 flex-1">
+            <p class="text-[10px] font-bold tracking-widest text-cocoa/40">${p.id}</p>
+            <button data-action="open-product" data-id="${p.id}" class="font-bold text-sm text-left leading-snug line-clamp-2">${p.name}</button>
+            <p class="font-display font-bold text-berry mt-1">${inr(p.price)}</p>
+          </div>
+          <button data-action="wish" data-id="${p.id}" class="self-start w-9 h-9 rounded-full bg-blush text-rose grid place-items-center text-lg" aria-label="Remove">♥</button>
+        </div>`).join("")}
+      <button data-action="clear-wish" class="text-xs text-cocoa/50 underline">Clear all</button>
+    </div>`;
+  footer.classList.remove("hidden");
+  footer.innerHTML = `
+    <div class="flex items-center justify-between mb-2.5 text-sm">
+      <span class="text-cocoa/60">${items.length} item${items.length > 1 ? "s" : ""}</span>
+      <span class="font-display font-bold text-xl text-berry">Total ${inr(total)}</span>
+    </div>
+    <a href="${waLink(wishMessage(items))}" target="_blank" rel="noopener"
+       class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-bold rounded-full py-3 text-sm shadow-lg shadow-green-500/20 transition">Order all on WhatsApp</a>`;
+}
+
+function renderOpts() {
+  const p = prodById(state.pid); if (!p) return;
+  $("#opts").innerHTML = `
+    <p class="text-[10px] font-bold tracking-widest text-rose">CHOOSE COLOUR</p>
+    <div class="mt-2 flex flex-wrap gap-2">
+      ${p.colors.map(c => `<button data-action="color" data-color="${c}" class="px-4 py-2 rounded-full text-sm font-medium border transition ${c === state.color ? "bg-rose text-white border-rose" : "bg-white border-rose/25 hover:bg-blush"}">${c}</button>`).join("")}
+    </div>
+    <p class="text-[10px] font-bold tracking-widest text-rose mt-5">QUANTITY</p>
+    <div class="mt-2 inline-flex items-center bg-white border border-rose/25 rounded-full">
+      <button data-action="qty" data-d="-1" class="w-10 h-10 text-xl text-rose" aria-label="Decrease">−</button>
+      <span class="w-10 text-center font-bold">${state.qty}</span>
+      <button data-action="qty" data-d="1" class="w-10 h-10 text-xl text-rose" aria-label="Increase">+</button>
+    </div>`;
+}
+
+function renderFooter2() {
+  const p = prodById(state.pid); if (!p) return;
+  footer.classList.remove("hidden");
+  footer.innerHTML = `
+    <div class="flex items-center justify-between mb-2.5 text-sm">
+      <span class="text-cocoa/60">${state.qty} × ${inr(p.price)}</span>
+      <span class="font-display font-bold text-xl text-berry">Total ${inr(p.price * state.qty)}</span>
+    </div>
+    <div class="grid grid-cols-5 gap-2">
+      <a href="${waLink(orderMessage(p, state.color, state.qty))}" target="_blank" rel="noopener"
+         class="col-span-3 inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-bold rounded-full py-3 text-sm shadow-lg shadow-green-500/20 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.7 1.5h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.2 6.5 6.6 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
+        Order on WhatsApp
+      </a>
+      <a href="${waLink(askMessage(p))}" target="_blank" rel="noopener"
+         class="col-span-2 inline-flex items-center justify-center bg-blush hover:bg-peach text-berry font-semibold rounded-full py-3 text-sm transition">Ask details</a>
+    </div>`;
+}
+
+/* =========================================================
+   Events (one delegated listener)
+   ========================================================= */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-action]");
+  if (!t) return;
+  const a = t.dataset.action;
+
+  if (a === "wish") { e.stopPropagation(); toggleWish(t.dataset.id, e); return; }
+  if (a === "open-wishlist") { $("#mobileMenu").classList.add("hidden"); return openWishlist(); }
+  if (a === "close-drawer") { closeDrawer(); return; }
+  if (a === "clear-wish") { wish.clear(); saveWish(); updateWishUI(); renderWishBody(); showToast("Favourites cleared"); return; }
+  if (a === "shop-filter") { shopCol = t.dataset.id; renderShop(); return; }
+  if (a === "open-collection") return openCollection(t.dataset.id);
+  if (a === "open-product")    return openProduct(t.dataset.id, state.view === "wish" ? "wish" : null);
+  if (a === "color") { state.color = t.dataset.color; renderOpts(); renderFooter2(); return; }
+  if (a === "qty")   { state.qty = Math.min(20, Math.max(1, state.qty + Number(t.dataset.d))); renderOpts(); renderFooter2(); return; }
+});
+
+$("#drawerClose").addEventListener("click", closeDrawer);
+overlay.addEventListener("click", closeDrawer);
+$("#drawerBack").addEventListener("click", () => state.from === "wish" ? openWishlist() : openCollection(state.col));
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+
+$("#menuBtn").addEventListener("click", () => $("#mobileMenu").classList.toggle("hidden"));
+$$("#mobileMenu a").forEach(a => a.addEventListener("click", () => $("#mobileMenu").classList.add("hidden")));
+
+$$("[data-scroll]").forEach(b => b.addEventListener("click", () => {
+  $("#popularRow").scrollBy({ left: Number(b.dataset.scroll) * 270, behavior: "smooth" });
+}));
+
+/* Scroll reveal */
+let io;
+function observeReveal() {
+  if (!("IntersectionObserver" in window)) { $$(".reveal").forEach(el => el.classList.add("in")); return; }
+  io = io || new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }), { threshold: 0.12 });
+  $$(".reveal:not(.in)").forEach(el => io.observe(el));
+}
+
+/* =========================================================
+   Init
+   ========================================================= */
+setImg($("#heroImg"), stockUrl("crochet,amigurumi", 7, 900));
+setImg($("#storyImg"), stockUrl("crochet,yarn", 8, 900));
+renderMarquee();
+renderAll();
+renderFooter();
+wireGenericWA();
+$("#shopSearch").addEventListener("input", renderShop);
+</script>
+</body>
+</html>
